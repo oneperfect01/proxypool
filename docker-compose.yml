@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  proxypool:
+    image: opaochat/proxypool:latest
+    container_name: proxypool
+    restart: always
+    # ports:
+    #   - "8080:8080"
+    volumes:
+      - ./source:/app/source
+      - ./run.sh:/app/run.sh
+
